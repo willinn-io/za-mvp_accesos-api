@@ -1,0 +1,10 @@
+services:
+  willinn-unknown-api:
+    build:
+      context: .
+      dockerfile: Api/Dockerfile-test
+    container_name: willinn-unknown-api
+    environment:
+      "ASPNETCORE_URLS": "http://+:5001"
+    ports:
+      - "5001:5001"
